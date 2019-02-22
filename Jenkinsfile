@@ -153,6 +153,8 @@ node ('ibm-jenkins-slave-dind') {
         timeout(30) {
           sh 'npm run test:links'
         }
+        // pause the pipeline
+        sleep time: 60, unit: 'MINUTES'
       }
     }
 
