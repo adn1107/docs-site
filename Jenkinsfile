@@ -155,7 +155,7 @@ node ('ibm-jenkins-slave-dind') {
             sh 'npm run test:links'
           } catch (ex) {
             // ignore errors
-            echo ex
+            echo "${ex}"
           }
         }
         // pause the pipeline
